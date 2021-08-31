@@ -13,11 +13,9 @@ $(".trigger").click(function(){
 
 $(".bars").click(function(){
   this.classList.toggle("active")
-})
+});
 $(".moboverlay").click(function(){
   $(".trigger .bars").trigger("click");
-
-  
 
 });
 
