@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 $(".trigger").click(function(){
   $(".nav_bar").slideToggle(500);
-  $(".moboverlay").fadeIn('500');
+  $(".moboverlay").toggle('500');
   $("body").toggleClass("over")
 });
 
@@ -16,7 +16,7 @@ $(".bars").click(function(){
 })
 $(".moboverlay").click(function(){
   $(".trigger .bars").trigger("click");
-  $(".moboverlay").fadeOut('500');
+
   
 
 });
