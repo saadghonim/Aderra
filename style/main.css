@@ -252,6 +252,9 @@ html[dir="rtl"] .btn_icon{margin-right: 20px;}
   top: -5px;
   left: 15px;
   color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .user_hover:hover .ul_drop_user {
@@ -403,7 +406,16 @@ stroke-dashoffset: -132px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+  }
+  html[dir="rtl"] .head_right {
+    margin-left: 37px;
+
+  }
+  
+  html[dir="ltr"] .head_right {
     margin-right: 37px;
+
   }
   .header .logo{
     margin-bottom: 20px;
@@ -436,7 +448,7 @@ stroke-dashoffset: -132px;
   }
   .nav_ul{
     flex-direction: column;
-    padding: 40px 0 20px ;
+    padding: 60px 0 20px ;
   }
   html[dir="ltr"] .anc_nav{
     margin: 0;
@@ -1217,7 +1229,7 @@ footer .f-bottom{
 }
 .footer_social{
   text-align: center;
-  padding: 30px 0 10px;
+  padding: 30px 0 20px;
 }
 footer .f_list {
   padding: 0; 
