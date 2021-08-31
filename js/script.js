@@ -7,18 +7,16 @@ $(document).ready(function() {
 
 $(".trigger").click(function(){
   $(".nav_bar").slideToggle(500);
-  $(".moboverlay").toggle('500');
+  $(".moboverlay").fadeIn('500');
   $("body").toggleClass("over")
 });
-
-
-
 
 $(".bars").click(function(){
   this.classList.toggle("active")
 })
 $(".moboverlay").click(function(){
-  $(".trigger .bars").trigger("click")
+  $(".trigger .bars").trigger("click");
+  $(".moboverlay").fadeOut('500');
   
 
 });
