@@ -9,15 +9,20 @@ $(".trigger").click(function(){
   $(".nav_bar").slideToggle(500);
   $(".moboverlay").toggle('500');
   $("body").toggleClass("over")
-  
 });
 
+
+
+
+$(".bars").click(function(){
+  this.classList.toggle("active")
+})
 $(".moboverlay").click(function(){
-  $(".moboverlay").fadeOut('500');
-  $(".nav_bar").slideToggle(500);
-  $(".bars").removeClass("active")
-  $("body").removeClass("over")
+  $(".trigger .bars").trigger("click")
+  
+
 });
+
 $(".btn_drop_lang").click(function(){
   $(".ul_drop_lang").slideToggle(500)
 })

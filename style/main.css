@@ -350,6 +350,7 @@ html[dir="rtl"] .modal-body .ico_{left: 20px;}
 
 .modal-dialog{
   margin-top: 170px;
+  width: 92%;
 }
 .trigger {
   z-index: 999;
