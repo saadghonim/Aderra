@@ -312,8 +312,9 @@ html[dir="rtl"] .anc_nav{margin-right: 30px;}
 }
 button.close{
   position: absolute;
-  top:-20px;
-  right:-16px ;
+  top: -52px;
+  transform: translateX(-50%);
+  left: 50%;
   color:#ffffff;
   opacity: 1;
 }
@@ -478,7 +479,7 @@ stroke-dashoffset: -132px;
     font-size: 18px;
     position: absolute;
     top: 20px;
-    z-index: 99999999;
+    cursor: pointer;
   }
   html[dir="ltr"] .close_{
     left: 20px;
@@ -513,6 +514,9 @@ stroke-dashoffset: -132px;
     -moz-transition: unset;
     -ms-transition: unset;
     -o-transition: unset;
+}
+button.close{
+  top:-29px;
 }
 }
 .over{
@@ -1201,7 +1205,7 @@ footer .down_f:hover{
   transition: .5s;
 }
 .nest_list li{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .nest_list li a{
   font-size: 15px;
@@ -1242,6 +1246,7 @@ footer .down_f:hover{
   text-decoration: none; 
   line-height: 30px;
   text-transform: capitalize;
+  display: inline-block;
 }
 .btn_Subscribe{
   width: 185px;
@@ -1313,10 +1318,7 @@ footer .f_list .nest_list {
   }
 
   footer .down_f{
-    margin-top: 10px;
-  }
-  .input_div {
-    margin-bottom: 30;
+    margin: 11px 0 19px ;
   }
   .Newsletter p{
     margin-bottom: 20px;
@@ -1325,7 +1327,10 @@ footer .f_list .nest_list {
     margin-bottom: 20px;
   }
   .input_div {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+  }
+  .btn_Subscribe {
+    margin-bottom: 50px;
   }
 
 }
