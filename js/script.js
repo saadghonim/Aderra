@@ -10,12 +10,14 @@ $(".trigger").click(function(){
   $(".moboverlay").toggle('500');
   $("body").toggleClass("over")
 });
-
-$(".bars").click(function(){
-  this.classList.toggle("active")
+$(".close_").click(function(){
+    $(".nav_bar").slideToggle(500);
+    $(".moboverlay").toggle('500');
+    $("body").toggleClass("over")
 });
+
 $(".moboverlay").click(function(){
-  $(".trigger .bars").trigger("click");
+  $(".trigger .bars .close_").trigger("click");
 
 });
 

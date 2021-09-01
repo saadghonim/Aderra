@@ -313,7 +313,7 @@ html[dir="rtl"] .anc_nav{margin-right: 30px;}
 button.close{
   position: absolute;
   top:-20px;
-  right:-20px ;
+  right:-16px ;
   color:#ffffff;
   opacity: 1;
 }
@@ -321,18 +321,18 @@ button.close{
   padding: 0;
 }
 .modal-body input::placeholder{
-  color:#ffffff
+  color:rgb(255, 255, 255)
 }
 .modal-body .input-search{
   position: relative;
-  background-color: rgb(198, 174, 123)
+  background-color: rgb(255, 255, 255);
 }
 .modal-body input{
   width: 95%;
   border: none;
   height: 50px;
   padding: 0 20px ;
-  background-color: rgb(198, 174, 123);
+  background-color: rgb(255, 255, 255);
   color:#ffffff;
   font-size: 18px;
 }
@@ -342,7 +342,7 @@ button.close{
 .modal-body .ico_{
   position: absolute;
   top: 16px;
-  color:#ffffff;
+  color:#000000;
   font-size: 18px;
 }
 html[dir="ltr"] .modal-body .ico_{right: 20px;}
@@ -388,6 +388,12 @@ stroke-dashoffset: -132px;
 .nav_bar .head_left {
   display: none;
 }
+.header_menu{
+  display: none;
+}
+.close_{
+  display: none;
+}
 @media(max-width:767px){
   .logo img{
     width: 130px;
@@ -396,29 +402,40 @@ stroke-dashoffset: -132px;
     display: none;
   }
   .header{
-    flex-direction: column;
     padding: 15px 0 0;
   }
   .head_right{
-    width: 100%;
+    width: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     
   }
-  html[dir="rtl"] .head_right {
-    margin-left: 37px;
-
+  .head_right .search_d, .heart_{
+    display: none;
   }
-  
-  html[dir="ltr"] .head_right {
-    margin-right: 37px;
-
+  .header {
+    justify-content: space-between;
+    padding: 15px 0;
   }
-  .header .logo{
-    margin-bottom: 10px;
-
+.header_menu{
+  display: block;
+  display: flex;
+  flex-direction: row-reverse;
+}
+  html[dir="rtl"] .header_menu .btn_icon {
+    margin-left: 12px;
   }
+  html[dir="ltr"] .header_menu .btn_icon{
+    margin-right: 12px;
+  }
+  html[dir="ltr"] .btn_icon {margin:0}
+  html[dir="rtl"] .btn_icon {margin:0}
+  html[dir="ltr"] .head_right .btn_icon{margin-left: 20px;}
+  html[dir="rtl"] .head_right .btn_icon{margin-right: 20px;}
+  html[dir="rtl"] .ul_drop_lang{ right: -40px;}
+  html[dir="ltr"] .ul_drop_lang{left: -40px;}
+
   .trigger{
     display: block;
   }
@@ -438,11 +455,25 @@ stroke-dashoffset: -132px;
     display: none;
     z-index: 999999;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
     background-color: #ffffff;
-    padding: 40px 0;
+    padding: 60px 0;
+  }
+  .close_ {
+    display: block;
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    z-index: 99999999;
+  }
+  html[dir="ltr"] .close_{
+    left: 20px;
+  }
+  html[dir="rtl"] .close_{
+    right: 20px;
   }
   .nav_ul{
     flex-direction: column;
@@ -611,7 +642,7 @@ html[dir="ltr"] .slider .owl-carousel button.owl-dot {
 ~~~~~~~~~~~~~~~~~~~start banner~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
 .banner {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .banner img {
@@ -629,7 +660,7 @@ html[dir="ltr"] .slider .owl-carousel button.owl-dot {
 
 }
 .anc_banner::before{
-  background: rgba(168, 132, 56, 0.5);
+  background: rgb(255, 255, 255);
   bottom: 0;
   content: "";
   left: 0;
@@ -641,7 +672,7 @@ html[dir="ltr"] .slider .owl-carousel button.owl-dot {
   z-index: 9;
 }
 .anc_banner::after {
-  background: rgba(168, 132, 56, 0.5);
+  background: rgb(255, 255, 255);
   bottom: 0;
   content: "";
   left: 0;
@@ -703,6 +734,7 @@ html[dir="ltr"] .slider .owl-carousel button.owl-dot {
   color: rgb(0, 0, 0);
   font-weight: 400;
   text-transform: capitalize;
+  margin-bottom: 30px;
 }
 
 .products_img a{
@@ -738,7 +770,7 @@ html[dir="ltr"] .slider .owl-carousel button.owl-dot {
   -moz-transition: .5s;
   -ms-transition: .5s;
   -o-transition: .5s;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .add_shopping:hover{
   background-color: rgb(195, 172, 124);
@@ -1031,7 +1063,7 @@ footer {
   font-family: "Tajawal";
   color: rgb(117, 117, 117);
   font-weight: 400;
-  line-height: 22px;
+  line-height: 25px;
   margin-bottom: 15px;
 }
 .input_div{
@@ -1122,10 +1154,10 @@ border: 1px solid rgb(159, 128, 56);
 }
 
 html[dir="rtl"] .social-media .social{
-  margin-left: 8px;
+  margin: 0 4px;
 }
 html[dir="ltr"] .social-media .social{
-  margin-right: 8px;
+  margin: 0 4px;
 }
 .social-media .social{
   border-radius: 50%;
@@ -1157,14 +1189,8 @@ footer .down_f:hover{
 .nest_list a{
   transition: .5s;
 }
-.How_To_Order__FAQ__Shipping___Tracking__Return_ {
-  font-family: "Tajawal";
-  line-height: 0.933;
-  text-align: left;
-  position: absolute;
-  left: 422.937px;
-  top: 3891.444px;
-  z-index: 32;
+.nest_list li{
+  margin-bottom: 10px;
 }
 .nest_list li a{
   font-size: 15px;
@@ -1307,7 +1333,7 @@ footer .f_list .nest_list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:30px 0;
+  padding:25px 0;
 }
 .copyright .left p {
   font-size: 15px;
@@ -1333,21 +1359,22 @@ html[dir="rtl"] .copyright .right p{  margin-left: 5px;}
 .copyright a img {
   margin-bottom: 4px;
 }
-
+.copyright_parant{
+  text-align: center;
+}
 .copyright i {
   color: #e71111;
 }
 @media (max-width: 767px) {
   .visa{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
 @media (max-width: 450px) {
   .copyright {
       flex-direction: column;
       justify-content: center;
-      height: 85px;
-      margin-bottom: 15px;
+      padding: 15px 0;
   }
   .copyright .left p {
       margin-bottom: 5px;
