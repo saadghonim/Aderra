@@ -439,7 +439,11 @@ stroke-dashoffset: -132px;
   html[dir="rtl"] .head_right .btn_icon{margin-right: 20px;}
   html[dir="rtl"] .ul_drop_lang{ right: -40px;}
   html[dir="ltr"] .ul_drop_lang{left: -40px;}
-
+  html[dir="ltr"] .ul_drop_user {left: -65px;}
+  html[dir="rtl"] .ul_drop_user {right: -65px;}
+  .ul_drop_user::after{
+    left:53%;
+  }
   .trigger{
     display: block;
   }
