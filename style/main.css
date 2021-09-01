@@ -394,6 +394,10 @@ stroke-dashoffset: -132px;
 .close_{
   display: none;
 }
+@media(max-width:992px){
+  html[dir="ltr"] .anc_nav{margin-left: 15px;}
+  html[dir="rtl"] .anc_nav{margin-right: 15px;}
+}
 @media(max-width:767px){
   .logo img{
     width: 130px;
@@ -461,6 +465,9 @@ stroke-dashoffset: -132px;
     height: 100vh;
     background-color: #ffffff;
     padding: 60px 0;
+  }
+  .anc_nav{
+    font-size: 20px;
   }
   .close_ {
     display: block;
