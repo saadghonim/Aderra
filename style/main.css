@@ -1189,7 +1189,7 @@ footer .down_f {
   position: relative;
   display: flex;
   margin-bottom: 15px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 } 
 footer .down_f:hover{
   text-decoration: none;
