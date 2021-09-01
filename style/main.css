@@ -236,6 +236,9 @@ color: rgb(168, 132, 56);
   -ms-transition: .5s;
   -o-transition: .5s;
 }
+.btn_icon:focus{
+  outline: 0;
+}
 .btn_icon:hover{
   color: rgb(159, 128, 56);
 }
